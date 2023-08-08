@@ -1,0 +1,6 @@
+h1{text-align: center;}
+html{background-color: whitesmoke;}
+img{
+    border: 10px solid black;
+    border-width: 0px 10px 20px 30px;
+}
