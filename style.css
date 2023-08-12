@@ -57,6 +57,29 @@ header{
     text-shadow: 1px 1px 5px 1px rgb(225, 189, 247);
 }
 
+div.menu{
+    display: none;
+    font-size: 1.5rem;
+}
+.dropdown_menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    right: 0.01px;
+    top:60px;
+    width: 250px;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu a{
+    padding: 0.7rem;
+    color: white;
+    text-decoration: none;
+}
 .home{
     position: relative;
     width: 100%;
@@ -525,11 +548,20 @@ footer h3{
     }
 
     Nav {
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 1px; /* Adjust as needed */
         justify-content: space-between;
     }
+
+    div.menu{
+        display: block;
+        font-size: 2rem;
+    }
+    .dropdown_menu.open{
+        height: 240px;
+    }
+    
     .Nav a {
         font-size: 18px; /* Adjust font size for mobile */
     }
