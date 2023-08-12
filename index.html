@@ -12,15 +12,39 @@
         <div class="NavBar">
             <a href="" class="Logo">Portfolio</a>
             <nav class="Nav">
-            <a href="#home" style="--1:1" class="active">Home</a>
-            <a href="#about" style="--1:2">About</a>
-            <a href="#Services" style="--1:3">Projects</a>
-            <a href="#skills" style="--1:4">Skills</a>
-            <a href="#contacts" style="--1:5">Contact</a>
+                <a href="#home" style="--1:1" class="active">Home</a>
+                <a href="#about" style="--1:2">About</a>
+                <a href="#Services" style="--1:3">Projects</a>
+                <a href="#skills" style="--1:4">Skills</a>
+                <a href="#contacts" style="--1:5">Contact</a>
             </nav>
+            <div class="dropdown_menu ">
+                <a href="#home" style="--1:1" class="active">Home</a>
+                <a href="#about" style="--1:2">About</a>
+                <a href="#Services" style="--1:3">Projects</a>
+                <a href="#skills" style="--1:4">Skills</a>
+                <a href="#contacts" style="--1:5">Contact</a>
+             </div>
+            <div class="menu">
+                <box-icon name='menu' color='#fffbfb' ></box-icon>
+            </div>
          </div>
-    </header>
 
+    </header>
+    <script>
+        const menu = document.querySelector(".menu")
+        const menuicon = document.querySelector(".menu i")
+        const dropdownMenu = document.querySelector(".dropdown_menu")
+
+        menu.onclick = function(){
+            dropdownMenu.classList.toggle("open")
+            const isOpen = dropdownMenu.classList.contains("open")
+
+            menuicon.classList = isOpen
+                ? "menu-bar"
+                : "menu-bar"
+        }
+    </script>
     <section class="home" id="home">
         <div class="home-content">
             <div class="intro">
