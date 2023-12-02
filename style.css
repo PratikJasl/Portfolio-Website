@@ -585,6 +585,8 @@ footer{
 .Sub-title-1 span{
     color: #f5f5f5;
     text-decoration:underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
 }
 footer h3{
     font-size: 20px;
@@ -648,7 +650,7 @@ footer h3{
     }
     #Profile{
         width: 100%;
-        height: 320px;
+        height: 100%;
     }     
 
     .about{
@@ -755,6 +757,76 @@ footer h3{
         width: 100%;
         /* margin-right: 500px; */
     }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .Nav a{
+        font-size: 3rem;
+    }
+    a.Logo{
+        font-size: 3rem;
+    }
+    div.intro{
+        font-size: 2rem;
+    } 
+    .content h1{
+        font-size: 4rem;
+    }
+    .content p{
+        font-size: 2.5rem;
+    }
+    img#Profile{
+        width: 500px;
+        height: 500px;
+    }
+
+    .more{
+        size: 2rem;
+    }
+
+    img#Profile-2{
+        width: 500px;
+        height: 500px;
+    }
+
+    .Details h1{
+        font-size: 4rem;
+    }
+
+    .Details p{
+        font-size: 2rem;
+    }
+
+    .Sub-title{
+        font-size: 5rem;
+    }
+    #Services{
+        margin-bottom: 15rem;
+    }
+    .heading1{
+        font-size: 2rem;
+    }
+    .Technical-bars{
+        width: 1000px;
+    }
+    .bar{
+        height: 8rem;
+        width: 8rem;
+    }
+    .radial-bars{
+        width: 1000px;
+    }
+    .radial-bar{
+        height: 300px;
+        width: 400px;
+        font-size: 1.5rem;
+    }
+  
+    
+
+
+   
 }
 
 
