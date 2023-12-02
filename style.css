@@ -1,3 +1,5 @@
+
+/*HTML, Body and universal styling*/
 *{
     margin: 0;
     padding: 0;
@@ -8,11 +10,15 @@ html{
     scroll-behavior: smooth;
 }
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10rem;
     color: #ededed;
     background: linear-gradient(45deg, rgb(31, 0, 64) 0%, rgba(113, 2, 17, 0) 70%) repeat scroll 0% 0%, linear-gradient(135deg, rgb(45, 2, 31) 10%, rgba(49, 5, 209, 0) 80%) 
     repeat scroll 0% 0%, linear-gradient(225deg, rgb(0, 1, 7) 10%, rgba(13, 148, 146, 0) 80%) repeat scroll 0% 0%, rgba(0, 0, 0, 0) linear-gradient(315deg, rgb(31, 2, 39) 100%, rgba(9, 245, 5, 0) 70%) repeat scroll 0% 0%;
 }
-
+/*Nav-bar header styling*/
 header{
     display: flex;
     flex-direction: row;
@@ -78,9 +84,14 @@ div.menu{
 }
 .dropdown_menu a{
     padding: 0.7rem;
+    width: 100%;
     color: white;
+    text-align: center;
     text-decoration: none;
+    border: 1px solid white;
 }
+
+/* Home conetent styling */
 .home{
     position: relative;
     width: 100%;
@@ -139,7 +150,6 @@ div.menu{
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
-
 .contact a{
     display: inline-flex;
     align-items: center;
@@ -154,6 +164,7 @@ div.menu{
     animation: slideRight 1s ease forwards;
     animation-delay: calc(.1s*var(--1));
 }
+
 .contact a:hover{
     background: #ae01ff;
     color: rgb(248, 248, 248);
@@ -183,6 +194,7 @@ div.menu{
     box-shadow: 2px 2px 20px 2px rgb(233, 137, 245);
 }
 
+/* About Section Styling */
 .about{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -209,13 +221,13 @@ div.menu{
     margin-top: 10px;
     line-height: 1.5;
 }
-
+/* Projects Section Styling */
 #Services{
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
-    margin-left: 2.5rem;
+    /* margin-left: 1.5rem;  */
     margin-top:7rem;
 }
 .Sub-title{
@@ -250,13 +262,15 @@ div.menu{
 }
 .services-list a{
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 .services-container{
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
     gap:5rem;
 }
 .services-list:hover{
@@ -267,13 +281,25 @@ div.menu{
 }
 #services-list-2{
     background-image: url(./assets/Background2.jpg);
+    
 }
 #services-list-3{
     background-image: url(./assets/Background2.jpg);
 }
+
+#services-list-4{
+    background-image: url(./assets/Background2.jpg);
+}
+#Demo{
+    text-decoration: underline;
+    color: #ae01ff;
+}
+/* Skills Section Styling */
 .Technical-bars{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 600px;
     gap: 20px;
 }
 section{
@@ -281,10 +307,14 @@ section{
     flex-wrap: wrap;
 }
 .container1{
-    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    width: 100%;
     height: 500px;
     padding: 75px;
-    margin-left: 330px;
     margin-bottom: 150px;
 }
 .heading1{
@@ -294,8 +324,15 @@ section{
     text-decoration-thickness: 5px;
     margin-bottom:50px
 }
+
+/* .Technical-bars{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+} */
 .bar{
-    font-size: 23px;
+    font-size: 50px;
 }
 .Technical-bars .bar{
     margin-top: 40px 0;
@@ -313,15 +350,37 @@ section{
     font-size: 17px;
     font-weight: 500;   
 }
-.Technical-bars .bar .progress-line{
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 7px;
-    background-color: #ffffff; 
-    animation: animate 1s cubic-bezier(1,0,0,1) forwards; 
-    transform: scaleX(0);
-    transform-origin: left;
+
+/* Contacts Section Styling */
+.contacts{
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.contacts a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgb(243, 233, 241);
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffffff;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.1s*var(--1));
+}
+.contacts a:hover{
+    background: #ae01ff;
+    color: rgb(248, 248, 248);
+    box-shadow: 0 0 25px #ffffff;
 }
 @keyframes animate{
     100%{
@@ -409,13 +468,14 @@ section{
     flex-direction: column;
     gap: 1rem;
     margin-top: 8rem;
-    margin-left: 28rem;
-    align-items: center;
-    justify-content: center;
-    
-}
-.radial-bars{
     width: 100%;
+    /* margin-left: 28rem; */
+    align-items: center;
+    justify-content: center;   
+}
+
+.radial-bars{
+    width: 600px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -504,23 +564,34 @@ section{
     font-weight: 500;
 }
 
+.contact-container{
+    margin-bottom:0%;
+}
 footer{
     background-color: rgb(76, 5, 82);
-    display: flex;
-    justify-content: space-around;
-    height: 7rem;
+    display: flexbox;
+    flex-direction: column;
+    height: 10rem;
     width: 100%;
-    margin-top: 80px;
+}
+
+.Sub-title-1{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Generalsans","sans-serif";
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.Sub-title-1 span{
+    color: #f5f5f5;
+    text-decoration:underline;
 }
 footer h3{
     font-size: 20px;
     padding-top: 3px;
     font-family: "Generalsans","sans-serif" ;
 }
-.container3{
-    display: inline-flex;
-    gap: 25rem;
-}
+
 #nav-contact{
     padding-top: 2.5rem;
 }
@@ -603,28 +674,41 @@ footer h3{
     }
 
     .Services{
-        display: inline-flex;
+        width: 100%;
+        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
     .services-container{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .container1,
-    .container2 {
+    .container1
+    {
         padding: 0px 20px; /* Adjust padding for mobile */
         margin-left: 1px;
+        margin-right: 1px;
+        flex-direction: column;
     }
+    
     .heading1 {
         font-size: 24px; /* Adjust font size for mobile */
     }
 
     .Technical-bars {
-        flex-direction: column; /* Stack bars vertically */
+        flex-direction: row;
+        flex-wrap: wrap; /* Stack bars vertically */
+        align-items: center;
+        overflow:scroll;
     }
     .bar,
     .radial-bar {
-        margin-bottom: 20px; /* Add spacing between bars */
+        margin-bottom: 10px; /* Add spacing between bars */
+    }
+    .radial-bars{
+        width: fit-content;
+        padding-left: 1rem;
     }
 
     .progress-bar,
@@ -665,14 +749,12 @@ footer h3{
     }
     .container1{
         width: 100%;
-        margin-right: 400px;
+        /* margin-right: 400px; */
     }
     .container2{
         width: 100%;
-        margin-right: 500px;
+        /* margin-right: 500px; */
     }
-
-
 }
 
 

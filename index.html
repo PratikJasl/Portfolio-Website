@@ -44,13 +44,21 @@
                 ? "menu-bar"
                 : "menu-bar"
         }
+
+        document.body.addEventListener("click", function(event) {
+            const isClickInsideDropdown = dropdownMenu.contains(event.target);
+            const isClickOnMenu = menu.contains(event.target);
+            if (!isClickInsideDropdown && !isClickOnMenu) {
+               dropdownMenu.classList.remove("open");
+            }
+        });
     </script>
     <section class="home" id="home">
         <div class="home-content">
             <div class="intro">
                 <div class="content">
                     <h1>Hello, It's me <span>Pratik Jussal</span></h1>  
-                    <p>I'm a BlockChain Developer, with a passion for teaching 
+                    <p>I'm a Full Stack BlockChain Developer, with a passion for teaching 
                     and learning. Self-driven Electronics and Software enthusiast
                     set out to explore and develop new technologies.
                     </p>
@@ -76,7 +84,7 @@
         <div class="Details">
             <h1>About <span>Me</span></h1>
             <p>
-                I am a Blockchain Developer, with a passion for teaching and learning,
+                I am a Full Stack Blockchain Developer, with a passion for teaching and learning,
                 Over the past year, I have develed deep into the world of blockchain
                 technology, exploring its endless possibilities and applications.
                 My journey began with an internship at Chain-cubator devs, where I 
@@ -101,7 +109,7 @@
             </div>
             <div class="services-container">
                 <div class ="services-list" id="services-list-1">
-                    <a href="https://github.com/PratikJasl" target="_main">
+                    <a href="https://github.com/PratikJasl/NFT-Factory" target="_main">
                         <h2 class="services-h2">NFT MarketPlace</h2>
                         <p>The NFT marketplace contract, allows users to list 
                         their NFTs in the marketplace and trade NFTs for the desired price.  
@@ -109,8 +117,20 @@
                     </a>
                 </div>
 
+                <div class ="services-list" id="services-list-1">
+                    <a href="https://github.com/PratikJasl/Birthday-Reminder" target="_main">
+                        <h2 class="services-h2">Birthday Reminder</h2>
+                        <p> This web application enables users to save and cherish the birthdays of their loved 
+                            ones. It goes a step further by sending timely reminders, ensuring that users never 
+                            miss the opportunity to celebrate and make their loved ones feel cherished on their 
+                            special day. 
+                        </p>
+                        <a href = "https://pratikjasl.github.io/Birthday-Reminder/" target="_main" id="Demo">Demo</a>
+                    </a>
+                </div>
+
                 <div class ="services-list" id="services-list-2">
-                    <a href="https://github.com/PratikJasl" target="_main">
+                    <a href="https://github.com/PratikJasl/Presale" target="_main">
                         <h2>Presale Contract</h2>
                         <p> The contract facilitates the creation and management 
                             of pre-sale events, allowing investors to lock their investments 
@@ -137,49 +157,68 @@
             <h1 class="Sub-title">My<span> Skills</span></h1>
             <h1 class="heading1">Technical Skills</h1>
             <div class="Technical-bars">
-                <div class="bar"> <box-icon name='html5' type='logo' color='red' ></box-icon>
-                    <div class="info">
-                        <span>HTML</span>
-                    </div>
-                    <div class="progress-line html">
-                        <span></span>
-                    </div>
+                <div class="bar"> <box-icon name='html5' type='logo' color='red' size="5rem" ></box-icon>
+                
                 </div>
 
-                <div class="bar"><box-icon name='css3' type='logo' color='cyan' ></box-icon>
-                    <div class="info">
-                        <span>CSS</span>
-                    </div>
-                    <div class="progress-line css">
-                        <span></span>
-                    </div>
+                <div class="bar"><box-icon name='css3' type='logo' color='cyan' size="5rem" ></box-icon>
+                   
                 </div>
 
-                <div class="bar"> <box-icon name='javascript' type='logo' color='yellow' ></box-icon>
-                    <div class="info">
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="progress-line JS">
-                        <span></span>
-                    </div>
+                <div class="bar"> <box-icon name='javascript' type='logo' color='yellow' size="5rem" ></box-icon> 
+                 
                 </div>
 
-                <div class="bar"><box-icon name='code-block' color='white' ></box-icon>
-                    <div class="info"> 
-                        <span>Solidity</span>
-                    </div>
-                    <div class="progress-line sol">
-                        <span></span>
-                    </div>
+                <div class="bar"><box-icon name='code-block' color='white' size="5rem" ></box-icon>
+                    
                 </div>
 
-                <div class="bar"><box-icon name='hard-hat' type='solid' color='yellow' ></box-icon>
-                    <div class="info">
-                        <span>Hardhat</span>
-                    </div>
-                    <div class="progress-line Hardhat">
-                        <span></span>
-                    </div>
+                <div class="bar"><box-icon name='hard-hat' type='solid' color='yellow' size="5rem" ></box-icon>
+                    
+                </div>
+
+                <div class="bar"><box-icon type='logo' name='typescript' color='cyan' size="5rem"></box-icon>
+                    
+                </div>
+
+                <div class="bar"><box-icon type='logo' name='nodejs' color='green' size="5rem"></box-icon>
+                    
+                </div>
+
+                <div class="bar"><box-icon type='logo' name='dropbox' color='grey' size="5rem"></box-icon>
+                    
+                </div>
+
+                <div class="bar"> <box-icon type='logo' name='react' color='cyan' size="5rem"></box-icon>
+                
+                </div>
+
+                <div class="bar"> <box-icon type='logo' name='bootstrap' color='darkblue' size="5rem"></box-icon>
+                
+                </div>
+
+                <div class="bar"> <box-icon type='logo' name='visual-studio' color='darkblue' size="5rem"></box-icon>
+                
+                </div>
+
+                <div class="bar"> <box-icon type='logo' name='git' color='white' size="5rem"></box-icon>
+                
+                </div>
+
+                <div class="bar"> </box-icon>
+                <img src="./assets/solidity.png" height="80px" alt="solidity icon"/>
+                </div>
+
+                <div class="bar"> </box-icon>
+                    <img height="80" src="./assets/express.jpg" alt="express-js"/>
+                </div>
+
+                <div class="bar"> <box-icon type='logo' name='mongodb' color='green' size="80px" ></box-icon>
+                    
+                </div>
+
+                <div class="bar"> <box-icon type='logo' name='windows' color='blue' size="80px"></box-icon></box-icon>
+                    
                 </div>
             </div>
         </div>
@@ -227,11 +266,12 @@
         </div>
 
 
-
+ 
     </section>
-
+    
     <footer class="container3" id="contacts"> 
-            <div class="contact">
+            <div class="Sub-title-1"><span>Contacts</span></div>
+            <div class="contacts">
                 <a href="https://www.linkedin.com/in/pratik-jussal-772579214/" target="_main" style="--1:6"> <i class="bi bi-linkedin"></i> </a>
                 <a href="./Gmail.html" target="_main" style="--1:7"> <i class="bi bi-envelope-at"></i></a>
                 <a href="https://twitter.com/PratikJasl" style="--1:8"> <i class="bi bi-twitter"></i></a>
@@ -239,7 +279,7 @@
             </div>   
     </footer>       
           
-
+ 
 
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
