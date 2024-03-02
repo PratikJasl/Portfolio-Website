@@ -691,6 +691,7 @@ footer h3{
         padding: 0px 20px; /* Adjust padding for mobile */
         margin-left: 1px;
         margin-right: 1px;
+        margin-top: 5rem;
         flex-direction: column;
     }
     
@@ -702,7 +703,6 @@ footer h3{
         flex-direction: row;
         flex-wrap: wrap; /* Stack bars vertically */
         align-items: center;
-        overflow:scroll;
     }
     .bar,
     .radial-bar {
