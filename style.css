@@ -634,6 +634,9 @@ footer h3{
     }
     .dropdown_menu.open{
         height: 240px;
+        background-color: rgb(76, 5, 82);
+        border-radius: 8%;
+        padding: 1rem;
     }
     
     .Nav a {
